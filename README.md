@@ -74,23 +74,10 @@ Ainda no arquivo de configuração, defina as permissões para que o Apache poss
     Require all granted
 </Directory>
 ```
+### 5. Mover os Arquivos para os Diretórios Corretos
+sudo mv index.html /var/www/html/
 
-### 5. Criar um Script CGI de Teste
-
-Para verificar se o CGI está funcionando, crie um script de teste no diretório `/usr/lib/cgi-bin/`. Neste exemplo, criaremos um script em Shell:
-
-```bash
-sudo nano /usr/lib/cgi-bin/test.sh
-```
-
-Adicione o seguinte conteúdo ao arquivo:
-
-```bash
-#!/bin/bash
-echo "Content-type: text/html"
-echo ""
-echo "<html><body><h1>CGI Test</h1></body></html>"
-```
+sudo mv saudacao.cgi /usr/lib/cgi-bin/
 
 ### 6. Tornar o Script Executável
 
@@ -108,15 +95,13 @@ Para aplicar todas as configurações, reinicie o Apache:
 sudo systemctl restart apache2
 ```
 
-### 8. Testar o Script CGI
-
-Abra o navegador e acesse o seguinte endereço para testar o script:
+### 8. Executar o Script CGI
 
 ```
-http://localhost/cgi-bin/test.sh
+sudo /usr/lib/cgi-bin/saudacao.cgi
+
 ```
 
-Você deve ver uma página com o título **CGI Test**.
 
 ### 9. Verificar Logs de Erro (Opcional)
 
@@ -126,6 +111,9 @@ Se o script não funcionar como esperado, consulte o log de erros do Apache para
 sudo tail -f /var/log/apache2/error.log
 ```
 
+### 10. Executar o form.html
+Abra o navegador e acesse a página HTML:
+http://localhost/form.html
 ## Conclusão
 
 Com estas etapas, você configurou o ambiente CGI no Ubuntu com Apache. Agora é possível executar scripts no servidor e gerar conteúdo dinâmico em resposta a interações do cliente. Para adicionar mais funcionalidades, crie scripts em linguagens como Shell, Perl ou Python e armazene-os no diretório CGI configurado.

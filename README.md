@@ -84,7 +84,7 @@ sudo mv saudacao.cgi /usr/lib/cgi-bin/
 Dê permissão de execução ao script criado:
 
 ```bash
-sudo chmod +x /usr/lib/cgi-bin/test.sh
+sudo chmod +x /usr/lib/cgi-bin/saudacao.cgi
 ```
 
 ### 7. Reiniciar o Apache

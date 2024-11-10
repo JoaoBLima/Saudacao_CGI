@@ -1,3 +1,19 @@
+# Formulário de Saudação
+
+Este projeto é uma aplicação simples de formulário web que captura o nome do usuário e exibe uma mensagem de saudação personalizada. Ele utiliza HTML para o formulário e um script Bash CGI para processar a entrada e gerar a resposta.
+
+## Estrutura do Projeto
+
+- **index.html**: Página inicial do projeto, onde o usuário insere o nome.
+- **saudacao.cgi**: Script CGI em Bash que recebe o nome inserido, processa a informação e exibe uma saudação personalizada.
+
+## Pré-requisitos
+
+Para rodar este projeto, você precisará de:
+
+- Um servidor web com suporte a CGI, como Apache.
+- Acesso ao terminal para configurar permissões e o ambiente CGI.
+- Permissão de execução para o script `saudacao.cgi`.
 
 # Configuração de CGI no Ubuntu com Apache
 

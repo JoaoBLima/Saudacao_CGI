@@ -4,7 +4,7 @@ Este projeto é uma aplicação simples de formulário web que captura o nome do
 
 ## Estrutura do Projeto
 
-- **index.html**: Página inicial do projeto, onde o usuário insere o nome.
+- **form.html**: Página inicial do projeto, onde o usuário insere o nome.
 - **saudacao.cgi**: Script CGI em Bash que recebe o nome inserido, processa a informação e exibe uma saudação personalizada.
 
 ## Pré-requisitos
